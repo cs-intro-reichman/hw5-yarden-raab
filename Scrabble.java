@@ -118,7 +118,7 @@ public class Scrabble {
 						System.out.println("No such word in the dictionary. Try agin.");
 					}
 					else {
-						hand = MyString.remove(input, hand);
+						hand = MyString.remove(hand, input);
 						int tempScor =wordScore(input);
 						score += tempScor;
 						System.out.println(input + " earned " + tempScor + " points. Score: " + score + " points");
