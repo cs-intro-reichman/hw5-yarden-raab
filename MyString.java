@@ -12,7 +12,9 @@ public class MyString {
         //System.out.println(subsetOf("pass","space"));
         //System.out.println(randomStringOfLetters(5));
         //System.out.println(remove("meet","committee"));
-        System.out.println(insertRandomly('s', "abcdefghij"));
+        String s = remove("meet","committee");
+        System.out.println(s);
+        //System.out.println(insertRandomly('s', "abcdefghij"));
     }
 
     /**
@@ -68,6 +70,9 @@ public class MyString {
      * @return a string consisting of the characters of str, separated by spaces.
      */
     public static String spacedString(String str) {
+        if (str.equals("")) {
+            return str;
+        }
         String newStr = "";
         while (str.length() > 1) {
             newStr = newStr + str.charAt(0) + " ";
@@ -108,12 +113,12 @@ public class MyString {
      * @return a string consisting of str1 minus all the characters of str2
      */
     public static String remove(String str1, String str2) {
-        while (!str1.equals("")) {
-            String charS = str1.charAt(0) + "";
+        while (!str2.equals("")) {
+            String charS = str2.charAt(0) + "";
             str1 = str1.replaceFirst(charS, "");
             str2 = str2.replaceFirst(charS, "");
         }
-        return str2;
+        return str1;
     }
 
     /**
